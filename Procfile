@@ -1,1 +1,1 @@
-web: gunicorn Linkedin_Summerizer.wsgi --log-file - 
+web: gunicorn Linkedin_Summerizer.wsgi --log-file -
