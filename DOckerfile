@@ -17,3 +17,4 @@ RUN pip install -r requirements.txt
 COPY . .
 
 CMD gunicorn Linkedin_Summerizer.wsgi
+CMD python manage.py runserver 
