@@ -1,0 +1,45 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI : LinkedIn Summarizer </title>
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+</head>
+
+<body>
+    <div id="container">
+        <h1>The AI Powered Summarizer</h1>
+        <h2> For <h2 id="Highlight">LinkedIn</h2>
+        </h2>
+   
+
+    <p class="typing-erase">A AI Generated Self Intro for linkedin About Section.</p>
+    <form action="/output" method="post">
+        {% csrf_token %}
+        <input type="text" name="url" id="url"  placeholder="// Enter Your LinkedIn Full Url ">
+
+        <button type="submit" class="btn"><span>Generate</span><img src="https://i.cloudup.com/2ZAX3hVsBE-3000x3000.png"
+                height="62" width="62"></button>
+    </form>
+    </div>
+    <div>
+        <div id="loading-animation" style="display:none;">
+            <div class="loader"></div>
+            <h4>&#128512;&#128512;Good Things Take Time&#128512;&#128512; <br><br>&emsp;&emsp;&emsp;&emsp;Wait For 1-2 Minute...<br><br><h4>
+        </div>
+        <script>
+            document.querySelector('form').addEventListener('submit', function () {
+                
+                document.getElementById('loading-animation').style.display = 'block';
+                document.getElementById('container').style.display = 'none';
+                
+            });
+        </script>
+
+</html>

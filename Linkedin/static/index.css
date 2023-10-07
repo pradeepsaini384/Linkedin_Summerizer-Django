@@ -1,0 +1,317 @@
+body{
+    background: #222;
+    font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+    ;
+}
+h1{
+    margin-top: 20vh;
+    padding-left: 20vw;
+    font-size: 5vw;
+    color : white;
+    margin-bottom: 0;
+}
+h2{
+    padding-left: 40vw;
+    font-size: 3.5vw;
+    color : #09b6a2;
+    margin-top: 0;
+  
+    display: flex;
+    position: absolute;
+}
+#Highlight{
+    position: relative;
+    padding-left: 46vw;
+    font-size: 3.5vw;
+    color : #09b6a2 ;
+    margin-top: 0;
+    filter: drop-shadow(0 0 0.75rem #2d1c30 );
+}
+form{
+    padding-top: 18vh;
+    padding-left: 25vw;
+}
+input[type=text] {
+    width: 50vw;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 50px;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    background-color: transparent;
+    color: #ffd79c;
+  }
+input[type=text]:focus {
+    border: 3px solid #555;
+    background-color: transparent;
+  }
+
+
+@-webkit-keyframes extend {
+    0% {
+       
+        border-radius: 100px;
+        } 10% {
+        
+        background: #fff;
+        margin-left: - 5px;
+        margin-top: - 5px;
+        } 20% {
+    
+        background: #09b6a2;
+        margin-left: 0px;
+        margin-top: 0px;
+        } 100% {
+      
+        border-radius: 100px;
+        margin-left: 190px;
+        background: #09b6a2;
+        }
+    }
+@keyframes extend {
+    0% {
+     
+        border-radius: 100px;
+        } 10% {
+        
+        background: #fff;
+        margin-left: - 5px;
+        margin-top: - 5px;
+        } 20% {
+       
+        background: #09b6a2;
+        margin-left: 0px;
+        margin-top: 0px;
+        } 100% {
+        
+        border-radius: 100px;
+        
+        background: #09b6a2;
+        }
+    }
+
+@-webkit-keyframes disappear {
+    0% {
+        opacity: 1;
+        } 20% {
+        color: #fff;
+        } 100% {
+        opacity: 0;
+        }
+    }
+@keyframes disappear {
+    0% {
+        opacity: 1;
+        } 20% {
+        color: #fff;
+        } 100% {
+        opacity: 0;
+        }
+    }
+/* @-webkit-keyframes {
+    
+} */
+@-webkit-keyframes appear {
+    0% {
+        opacity: 0;
+        } 70% {
+        opacity: 0;
+        } 100% {
+        opacity: 1;
+        }
+    }
+@keyframes appear {
+    0% {
+        opacity: 0;
+        } 70% {
+        opacity: 0;
+        } 100% {
+        opacity: 1;
+        }
+    }
+input, button, submit {
+    border: none
+    }
+
+
+.btn {
+    cursor: pointer;
+    border-width: 1px;
+    border-radius: 100px;
+    position: absolute;
+    border: 5px solid #09b6a2;
+    background-color: #09b6a2;
+    margin-left: -107px;
+    margin-top: 13px;
+    color: white;
+    }
+.btn1 {
+    margin-left: 12vw;
+    border-width: 1px;
+    border-radius: 100px;
+    position: absolute;
+    border: 5px solid #09b6a2;
+    background-color: #09b6a2;
+    margin-top: 13px;
+    color: white;
+    cursor: pointer;
+    }
+
+.btn > span {
+    font-size: 19px;
+    color: white
+    }
+
+img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0
+    }
+
+p {     
+        margin-top: 50px;
+        margin-left: 28vw;
+        color: white;
+        font-size:2vw;
+        font-weight: 100;
+        width: 0;
+        max-width: max-content;
+        overflow: hidden; 
+        border-right: .05em solid white; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+         /* Gives that scrolling effect as the typing happens */
+      }
+      
+.typing-erase {
+        animation: 
+          4s typing-erase 4s steps(50, end) infinite,
+          blink-caret .5s step-end infinite;
+          animation-delay: 1s;
+      }
+      
+      /* The type and erase effect */
+      @keyframes typing-erase {
+        0% { width: 0 }
+        80% { width: 100% }
+        90%, 100% { width: 0 }
+      }
+      
+      /* The typewriter cursor effect */
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: gray }
+      }
+
+
+      .type {
+        color:#0000;
+        background:
+          linear-gradient(-90deg,  #09b6a2 5px,#faf2f200 0) 10px 0,
+          linear-gradient(black 0 0) 0 0;
+        background-size:calc(var(--n)*1ch) 500%;
+        -webkit-background-clip:padding-box,text;
+        background-clip:padding-box,text;
+        background-repeat:no-repeat;
+        animation: 
+         b 3s infinite steps(1),   
+         t calc(var(--n)*.05s) steps(var(--n)) forwards ;
+      }
+      
+      @keyframes t{
+        from {background-size:0 200%}
+      }
+      @keyframes b{
+        50% {background-position:0 -100%,0 0}
+      }
+
+#Output{
+    margin-top: 10vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    background-color: white;
+    padding: 2vw;
+    border-radius: 10px;
+    border: #09b6a2;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.copyText{
+    cursor: pointer;
+    margin-top: -5px;
+    float: right;
+    border-width: 1px;
+    border-radius: 100px;
+
+    border: 5px solid #09b6a2;
+    background-color: #09b6a2;
+    
+    color: white;
+
+}
+
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    margin-left: 45%;
+    margin-top: 20%;
+}
+h4{
+    color: white;
+    margin-left: 37%;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 700px) {
+    h1{
+        font-size: 6.8vw;
+        padding-left: 3vw;
+    }
+    h2{
+        font-size: 6.8vw;
+        padding-left: 31vw;
+    }
+    #Highlight{
+        font-size: 6.8vw;
+        padding-left: 43vw;
+    }
+    .typing-erase{
+        font-size: 4vw;
+        margin-left: 8vw;
+    
+    }
+    
+    form{
+        padding-top: 10vh;
+        padding-left: 2vw;
+    }
+    input[type=text] {
+        width: 90vw;
+    }
+    .btn1{
+        margin-left: 15vw;
+    }
+    .copyText {
+        margin-top: -20px;
+        margin-right: -7px;
+    }
+}
