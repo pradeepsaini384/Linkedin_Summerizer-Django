@@ -1,0 +1,1 @@
+web: gunicorn Linkedin_Summerizer.wsgi
